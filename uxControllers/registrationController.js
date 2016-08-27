@@ -1,9 +1,19 @@
 var registration = angular.module('registrationController',[]);
 
-registration.controller('registrationController', ['$scope', function($scope, $window){
-	$scope.register = function(){
-		console.log("I am in the register function.");
-		if ($scope.user_type = "distributor")
+registration.controller('RegistrationController', ['$scope', function($scope){
+	$scope.register = function()
+	{
+		
+		$http.post('/api/create_dist', $scope.newDist).then(function(response){
+			$scope.feedback = response.data;		
+
+		}, function(response){
+			$scope.feedback = response.data;
+			$scope.displayDetailForm = false;
+		});
+		
+		
+		if ($user_type = "distributor")
 		{
 			$window.location.href ="custom-homepage-distributor.html";
 		}
@@ -16,4 +26,6 @@ registration.controller('registrationController', ['$scope', function($scope, $w
 			$window.location.href = "index.html";
 		}
 	};
+	
+	
 }])
