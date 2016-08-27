@@ -3,6 +3,8 @@ var DonationRequest = require('./requestSchema.js');
 
 
 exports.createDist = function(req, res){
+	console.log('in datacontroller, heard: ' + req.body.org_name);
+
 	var today = new Date();
 
 	var entry = new Distributor({

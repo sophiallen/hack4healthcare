@@ -1,7 +1,7 @@
 module.exports = function(app){
 	app.get('/', function(req, res){
 		res.type('text/html');
-		var options = {root: __dirname + '/../app'};
+		var options = {root: __dirname + '/../app/views'};
 		res.sendFile('index.html', options);
 	});
 
