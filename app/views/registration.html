@@ -40,45 +40,48 @@
                         <select name="user_type" placeholder="User Type" ng-model="user_type"/>
                           <option selected="selected">Select User Type</option>
                           <option value="distributor">Distributor</option>
-                          <option value="collector">Collector</option>
+
+
+                          <option value="supplier">Supplier</option>
+
                         </select>
                       </div>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="org" placeholder="Organization" />
+                        <input type="text" name="org" placeholder="Organization" ng-model="newDist.org_name" />
                       </div>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="first-name" placeholder="Contact First Name" />
+                        <input type="text" name="first-name" placeholder="Contact First Name" ng-model="newDist.first_name"/>
                       </div>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="last-name" placeholder="Contact Last Name" />
+                        <input type="text" name="last-name" placeholder="Contact Last Name" ng-model="newDist.last_name"/>
                       </div>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="phone" placeholder="Phone Number" />
+                        <input type="text" name="phone" placeholder="Phone Number" ng-model="newDist.phone"/>
                       </div>
                       <div class="6u$ 12u$(mobile)">
-                        <input type="text" name="email" placeholder="Email" />
+                        <input type="text" name="email" placeholder="Email" ng-model="newDist.email"/>
                       </div>
                       <div class="6u$ 12u$(mobile)">
-                        <input type="text" name="address" placeholder="Address" />
+                        <input type="text" name="address" placeholder="Address" ng-model="newDist.address"/>
                       </div>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="city" placeholder="City" />
+                        <input type="text" name="city" placeholder="City" ng-model="newDist.city"/>
                       </div>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="state" placeholder="State" />
+                        <input type="text" name="state" placeholder="State" ng-model="newDist.state"/>
                       </div>
                       <div class="6u$ 12u$(mobile)">
-                        <input type="text" name="zip" placeholder="Zip" />
+                        <input type="text" name="zip" placeholder="Zip" ng-model="newDist.zip"/>
                       </div>
 
                       <header>
                         <h2>Enter Account Information</h2>
                       </header>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="first-name" placeholder="Set username" />
+                        <input type="text" name="username" placeholder="Set username" ng-model="newUser.username"/>
                       </div>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="first-name" placeholder="Password" />
+                        <input type="text" name="password" placeholder="Password" ng-model="newUser.password"/>
                       </div>
                       <div class="12u$">
                         <button value="Register" ng-click="register()"/>Register</button>
