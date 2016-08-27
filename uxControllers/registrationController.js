@@ -1,4 +1,4 @@
-var registration = angular.module('registrationController',[]);
+var registration = angular.module('registerApp',[]);
 
 registration.controller('registrationController', function($scope){
 
