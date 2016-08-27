@@ -1,15 +1,19 @@
-var registration = angular.module('registration',[]);
+var registration = angular.module('registrationController',[]);
 
-registration.controller('RegistrationController', ['$scope', function($scope){
-	$scope.register = function()
-	{
-		if ($user_type = "distributor")
+registration.controller('registrationController', ['$scope', function($scope, $window){
+	$scope.register = function(){
+		console.log("I am in the register function.");
+		if ($scope.user_type = "distributor")
 		{
-			$window.location = "custom-homepage-distributor";
+			$window.location.href ="custom-homepage-distributor.html";
 		}
-		else
+		else if ($scope.user_type = "collector")
 		{
-			$window.location = "custom-homepage-collector";
+			$window.location.href = "custom-homepage-collector.html";
+		}
+		else //rediect to index.html
+		{
+			$window.location.href = "index.html";
 		}
 	};
 }])

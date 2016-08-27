@@ -7,10 +7,13 @@
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/main.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.min.js"></script>
+     <script src="../../uxControllers/registrationController.js"></script>
   </head>
-  <body>
+  <body ng-app="registration">
 
-      <div id="page-wrapper" ng-controller="RegistrationController">
+      <div id="page-wrapper" ng-controller="registrationController">
 
       <!-- Header -->
         <div id="header-wrapper">
@@ -30,11 +33,11 @@
                 <header>
                   <h2>Enter Your Information</h2>
                 </header>
-                <form action="#" method="post">
+                <form>
                   <div>
                     <div class="row">
                       <div class="6u 12u$(mobile)">
-                        <select name="user-type" placeholder="User Type" ng-model="user_type"/>
+                        <select name="user_type" placeholder="User Type" ng-model="user_type"/>
                           <option selected="selected">Select User Type</option>
                           <option value="distributor">Distributor</option>
                           <option value="collector">Collector</option>
@@ -78,7 +81,7 @@
                         <input type="text" name="first-name" placeholder="Password" />
                       </div>
                       <div class="12u$">
-                        <input type="submit" value="Register" ng-click="register()"/>
+                        <button value="Register" ng-click="register()"/>Register</button>
                       </div>
                     </div>
                   </div>
@@ -113,7 +116,6 @@
       <script src="assets/js/util.js"></script>
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
       <script src="assets/js/main.js"></script>
-      <script src="uxControllers/registrationController.js"></script>
 
 
   </body>
