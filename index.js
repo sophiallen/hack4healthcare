@@ -16,6 +16,12 @@ app.use('/api', require('cors')());
 var api = require('./routes/api.js');
 var routes = require('./routes/routes.js');
 
+app.get('/', function(req, res){
+		res.type('text/html');
+		var options = {root: __dirname + '/app/views'};
+		res.sendFile('index.html', options);
+	});
+
 app.listen(app.get('port'), function(){
 	console.log('express server started');
 });
