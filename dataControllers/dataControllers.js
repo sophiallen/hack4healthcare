@@ -34,7 +34,7 @@ exports.createDist = function(req, res){
 			console.log('db successful create');
 			res.json({
 				'type': 'success',
-				'msg': 'Successfully added distributor to our list of languages',
+				'msg': 'Successfully added distributor to our database',
 				'display': true
 			});
 		}
@@ -51,7 +51,27 @@ exports.createRequest = function(req, res){
 		distributor: req.body.,
 		urgency: {type: Number, default: 3},
 		fulfilled: Boolean
-	})
+	});
+
+	entry.save(function(err, entry){
+		//Save feedback to session
+		if (err){
+			console.log('error in db');
+			res.json({
+				'type': 'info',
+				'msg': 'An error occurred: unable to add request to our database.',
+				'display': true
+			});
+		} else {
+			console.log('db successful create');
+			res.json({
+				'type': 'success',
+				'msg': 'Successfully added request to our list of database',
+				'display': true
+			});
+		}
+
+	});
 }
 
 
@@ -74,3 +94,7 @@ exports.getAllSuppliers = function(req, res){
 		}
 	})
 }
+
+
+
+
