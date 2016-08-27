@@ -10,7 +10,7 @@
   </head>
   <body>
 
-      <div id="page-wrapper">
+      <div id="page-wrapper" ng-controller="RegistrationController">
 
       <!-- Header -->
         <div id="header-wrapper">
@@ -34,7 +34,7 @@
                   <div>
                     <div class="row">
                       <div class="6u 12u$(mobile)">
-                        <select name="user-type" placeholder="User Type" />
+                        <select name="user-type" placeholder="User Type" ng-model="user_type"/>
                           <option selected="selected">Select User Type</option>
                           <option value="distributor">Distributor</option>
                           <option value="collector">Collector</option>
@@ -78,7 +78,7 @@
                         <input type="text" name="first-name" placeholder="Password" />
                       </div>
                       <div class="12u$">
-                        <input type="submit" value="Register" />
+                        <input type="submit" value="Register" ng-click="register()"/>
                       </div>
                     </div>
                   </div>
