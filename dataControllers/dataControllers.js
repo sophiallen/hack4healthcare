@@ -20,15 +20,17 @@ exports.createDist = function(req, res){
 	entry.save(function(err, entry){
 		//Save feedback to session
 		if (err){
+			console.log('error in db');
 			res.json({
 				'type': 'info',
-				'msg': 'An error occurred: unable to add ' + capitalize(entry.name) + 'to our database.',
+				'msg': 'An error occurred: unable to add distributor to our database.',
 				'display': true
 			});
 		} else {
+			console.log('db successful create');
 			res.json({
 				'type': 'success',
-				'msg': 'Successfully added ' + capitalize(entry.name) + ' to our list of languages',
+				'msg': 'Successfully added distributor to our list of languages',
 				'display': true
 			});
 		}
