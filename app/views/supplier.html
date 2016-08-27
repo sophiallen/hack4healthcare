@@ -27,8 +27,39 @@
           <div id="banner" class="box container custom">
             <div class="row">
               <header>
-                <h4>Organization Requests</h4>
-              </header>  
+                <h2>Organization Requests</h2>
+              </header> 
+
+              <!-- Table to display Distributor and numbers--> 
+              <div class="request-table">
+
+                  <div class="results" ng-show="searched">
+                      
+                        
+                    <table style="width:100%">
+                      <tr>
+                        <th><p>Distributor</p></th>
+                        <th><p>Tampons</p></th> 
+                        <th><p>Pads</p></th>
+                        <th><p>Cups</p></th>
+                      </tr>
+                      
+
+                      <tr>
+                        <td>{{distributor.name}}</td>
+                        <td>{{tampons.number}}</td> 
+                        <td>{{pads.number}}</td>
+                        <td>{{cups.number}}</td>
+                      </tr>
+
+
+                    </table>
+
+
+                  </div>
+              </div>
+
+
             </div>
           </div>
         </div>
