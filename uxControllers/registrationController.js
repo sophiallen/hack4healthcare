@@ -1,6 +1,6 @@
 var registration = angular.module('registerApp',[]);
 
-registration.controller('registrationController', function($scope){
+registration.controller('registrationController', function($scope, $http, $window){
 
 	console.log("I am in the contrl");
 	$scope.register = function(){
