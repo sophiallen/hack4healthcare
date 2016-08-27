@@ -2,13 +2,13 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var distributorSchema = new Schema({
-	org_name: String,
+	orgName: String,
 	contactName: String,
 	phone: String,
 	email: String, 
 	address: String,
 	hours: String,
-	created: Date,
+	created: String,
 	donationsRecieved: Array
 });
 
