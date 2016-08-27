@@ -94,8 +94,15 @@ exports.getAllSuppliers = function(req, res){
 	})
 }
 
-exports.updateDist = function(req, res){
-
+exports.getAllRequests = function(req, res){
+	Distributor.find({userType: 'supplier'}, '-_id -__v', function(err, results){
+		if (err){
+			res.status(500).send('Error: could not get requests');
+		} else {
+			res.json(results);
+		}
+	})
 }
+
 
 

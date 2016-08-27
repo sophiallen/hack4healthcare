@@ -6,7 +6,7 @@ module.exports = function(app){
 		dataController.createDist(req, res);
 	});
 	
-	app.get('/api/get_all_distributors/:dists') , function(req, res){
+	app.get('/api/get_all_distributors/:dists' , function(req, res){
 		dataController.getAllDistributors(req.res);
 	});
 }
