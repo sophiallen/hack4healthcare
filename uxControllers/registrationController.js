@@ -9,7 +9,6 @@ registration.controller('RegistrationController', ['$scope', function($scope){
 
 		}, function(response){
 			$scope.feedback = response.data;
-			$scope.displayDetailForm = false;
 		});
 		
 		
