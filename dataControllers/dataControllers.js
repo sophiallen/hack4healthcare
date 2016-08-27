@@ -11,7 +11,8 @@ exports.createDist = function(req, res){
 		//id and users are auto-generated...
 		orgName: req.body.org_name,
 		userType: req.body.user_type,
-		contactName: req.body.contact_name,
+		first_name: req.body.first_name,
+		last_name: req.body.last_name,
 		phone: req.body.phone,
 		email: req.body.email,
 		address: req.body.address,
@@ -48,8 +49,8 @@ exports.createRequest = function(req, res){
 		amount: req.body.amount,
 		dateCreated: today.toLocaleDateString(),
 		distributor: req.body.,
-	urgency: {type: Number, default: 3},
-	fulfilled: Boolean
+		urgency: {type: Number, default: 3},
+		fulfilled: Boolean
 	})
 }
 
@@ -62,4 +63,14 @@ exports.getAllDists = function(req, res){
 			res.json(results);
 		}
 	});
+}
+
+exports.getAllSuppliers = function(req, res){
+	Distributor.find({userType: 'supplier'}, '-_id -__v', function(err, results){
+		if (err){
+			res.status(500).send('Error: could not get suppliers');
+		} else {
+			res.json(results);
+		}
+	})
 }
