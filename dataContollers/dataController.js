@@ -10,10 +10,32 @@ db.once('open', function() {
   console.log("successfully connected to mLab mongodb.");
 });
 
-var languageSchema = new Schema({
-	name: String,
-	engine: String,
-	users: {type: Number, default: 1}
+// var languageSchema = new Schema({
+// 	name: String,
+// 	engine: String,
+// 	users: {type: Number, default: 1}
+// });
+
+var requestSchema = new Schema({
+	type: String,
+	amount: {type: Number},
+	dateCreated: {type: Date},
+	distributor: String,
+	urgency: {type: Number, default: 3},
+	fulfilled: Boolean
 });
 
-module.exports = mongoose.model('Language', languageSchema);  
+
+var distributorSchema = new Schema({
+	org_name: String,
+	contactName: String,
+	phone: String,
+	email: String, 
+	address: String,
+	hours: String,
+	created: Date,
+	donationsRecieved: Array
+});
+
+
+//module.exports = mongoose.model('Language', languageSchema);  
