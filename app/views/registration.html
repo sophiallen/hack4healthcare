@@ -23,11 +23,10 @@
               </div>
 
       <!-- Main -->
-        <div id="main-wrapper">
-          <div class="container">
-            <div class="row 200%">
-              <div class="4u 12u(medium)">
-                <article id="contact" class="panel">
+        <div id="banner-wrapper">
+          <div id="banner" class="box container">
+            <div class="row">
+              <article id="contact" class="panel">
                 <header>
                   <h2>Enter Your Information</h2>
                 </header>
@@ -35,15 +34,49 @@
                   <div>
                     <div class="row">
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="first-name" placeholder="First Name" />
+                        <select name="user-type" placeholder="User Type" />
+                          <option selected="selected">Select User Type</option>
+                          <option value="distributor">Distributor</option>
+                          <option value="collector">Collector</option>
+                        </select>
                       </div>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="first-name" placeholder="Last Name" />
+                        <input type="text" name="org" placeholder="Organization" />
+                      </div>
+                      <div class="6u 12u$(mobile)">
+                        <input type="text" name="first-name" placeholder="Contact First Name" />
+                      </div>
+                      <div class="6u 12u$(mobile)">
+                        <input type="text" name="last-name" placeholder="Contact Last Name" />
+                      </div>
+                      <div class="6u 12u$(mobile)">
+                        <input type="text" name="phone" placeholder="Phone Number" />
                       </div>
                       <div class="6u$ 12u$(mobile)">
                         <input type="text" name="email" placeholder="Email" />
                       </div>
+                      <div class="6u$ 12u$(mobile)">
+                        <input type="text" name="address" placeholder="Address" />
+                      </div>
+                      <div class="6u 12u$(mobile)">
+                        <input type="text" name="city" placeholder="City" />
+                      </div>
+                      <div class="6u 12u$(mobile)">
+                        <input type="text" name="state" placeholder="State" />
+                      </div>
+                      <div class="6u$ 12u$(mobile)">
+                        <input type="text" name="zip" placeholder="Zip" />
+                      </div>
 
+                      <header>
+                        <h2>Enter Account Information</h2>
+                      </header>
+                      <div class="6u 12u$(mobile)">
+                        <input type="text" name="first-name" placeholder="Set username" />
+                      </div>
+                      <div class="6u 12u$(mobile)">
+                        <input type="text" name="first-name" placeholder="Password" />
+                      </div>
                       <div class="12u$">
                         <input type="submit" value="Register" />
                       </div>
@@ -51,7 +84,6 @@
                   </div>
                 </form>
               </article>
-                
             </div>
           </div>
         </div>
