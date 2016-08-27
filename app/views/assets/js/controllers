@@ -1,0 +1,26 @@
+recipeApp.config(function($routeProvider){
+    $routeProvider
+    .when('/#',{
+        templateUrl: 'recipeBox.html',
+        controller: 'recipeBoxCtrl'
+    })
+    .when('/recipes',{
+        templateUrl: '/recipes.html',
+        controller: 'recipesCtrl'
+    })
+    .when('/recipeDetails',{
+        templateUrl: '/viewRecipeDetails.html',
+        controller: 'recipeDetailCtrl'
+    })
+    .when('/create',{
+        templateUrl: '/createNotecard.html',
+        controller: 'createNotecardCtrl'
+    })
+    .when('/edit',{
+      templateUrl: '/editRecipeDetails.html',
+      controller: 'editRecipeCtrl'
+    })
+    .otherwise({
+        redirectTo: '/#'
+    });
+});
