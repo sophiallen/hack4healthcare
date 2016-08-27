@@ -48,9 +48,9 @@ exports.createRequest = function(req, res){
 		type: req.body.donation_type,
 		amount: req.body.amount,
 		dateCreated: today.toLocaleDateString(),
-		distributor: req.body.,
-		urgency: {type: Number, default: 3},
-		fulfilled: Boolean
+		distributor: req.body.dist_name,
+		urgency: req.body.urgency,
+		fulfilled: false
 	});
 
 	entry.save(function(err, entry){
@@ -74,7 +74,6 @@ exports.createRequest = function(req, res){
 	});
 }
 
-
 exports.getAllDists = function(req, res){
 		Distributor.find({userType: 'distributor'}, '-_id -__v', function(err, results){
 		if (err){
@@ -95,6 +94,8 @@ exports.getAllSuppliers = function(req, res){
 	})
 }
 
+exports.updateDist = function(req, res){
 
+}
 
 
