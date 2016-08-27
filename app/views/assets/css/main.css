@@ -1450,6 +1450,10 @@
 
 /* Forms */
 
+	.request-input {
+		width: 30px;
+	}
+
 	form label {
 		display: block;
 		font-weight: 800;
@@ -1463,7 +1467,7 @@
 	form input[type="password"],
 	form select,
 	form textarea {
-		-webkit-appearance: none;
+		/*-webkit-appearance: none;*/
 		display: block;
 		width: 100%;
 		border-radius: 8px;
@@ -1999,8 +2003,18 @@
 		padding: 4.5em;
 	}
 
+	#banner > .{
+		position: relative;
+		padding: 4.5em;
+	}
+
 		#banner h2 {
 			font-size: 3.5em;
+			margin: 0.1em 0 0.35em 0;
+		}
+
+		#banner h4 {
+			font-size: 1.5em;
 			margin: 0.1em 0 0.35em 0;
 		}
 
