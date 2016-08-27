@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>TamponsRus</title>
+    <title>Tampons R Us</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -10,7 +10,7 @@
   </head>
   <body>
 
-      <div id="page-wrapper">
+      <div id="page-wrapper" ng-controller="RegistrationController">
 
       <!-- Header -->
         <div id="header-wrapper">
@@ -18,7 +18,7 @@
 
             <!-- Logo -->
               <div id="logo">
-                <h1><a href="index.html">TamponsRus</a></h1>
+                <h1><a href="index.html">Tampons R Us</a></h1>
                 <span>hackforhealthcare</span>
               </div>
 
@@ -34,51 +34,54 @@
                   <div>
                     <div class="row">
                       <div class="6u 12u$(mobile)">
-                        <select name="user-type" placeholder="User Type" />
+                        <select name="user-type" placeholder="User Type" ng-model="user_type"/>
                           <option selected="selected">Select User Type</option>
                           <option value="distributor">Distributor</option>
-                          <option value="collector">Supplier</option>
+
+
+                          <option value="supplier">Supplier</option>
+
                         </select>
                       </div>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="org" placeholder="Organization" />
+                        <input type="text" name="org" placeholder="Organization" ng-model="newDist.org_name" />
                       </div>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="first-name" placeholder="Contact First Name" />
+                        <input type="text" name="first-name" placeholder="Contact First Name" ng-model="newDist.first_name"/>
                       </div>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="last-name" placeholder="Contact Last Name" />
+                        <input type="text" name="last-name" placeholder="Contact Last Name" ng-model="newDist.last_name"/>
                       </div>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="phone" placeholder="Phone Number" />
+                        <input type="text" name="phone" placeholder="Phone Number" ng-model="newDist.phone"/>
                       </div>
                       <div class="6u$ 12u$(mobile)">
-                        <input type="text" name="email" placeholder="Email" />
+                        <input type="text" name="email" placeholder="Email" ng-model="newDist.email"/>
                       </div>
                       <div class="6u$ 12u$(mobile)">
-                        <input type="text" name="address" placeholder="Address" />
+                        <input type="text" name="address" placeholder="Address" ng-model="newDist.address"/>
                       </div>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="city" placeholder="City" />
+                        <input type="text" name="city" placeholder="City" ng-model="newDist.city"/>
                       </div>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="state" placeholder="State" />
+                        <input type="text" name="state" placeholder="State" ng-model="newDist.state"/>
                       </div>
                       <div class="6u$ 12u$(mobile)">
-                        <input type="text" name="zip" placeholder="Zip" />
+                        <input type="text" name="zip" placeholder="Zip" ng-model="newDist.zip"/>
                       </div>
 
                       <header>
                         <h2>Enter Account Information</h2>
                       </header>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="first-name" placeholder="Set username" />
+                        <input type="text" name="username" placeholder="Set username" ng-model="newUser.username"/>
                       </div>
                       <div class="6u 12u$(mobile)">
-                        <input type="text" name="first-name" placeholder="Password" />
+                        <input type="text" name="password" placeholder="Password" ng-model="newUser.password"/>
                       </div>
                       <div class="12u$">
-                        <input type="submit" value="Register" />
+                        <input type="submit" value="Register" ng-click="register()"ng-model=""/>
                       </div>
                     </div>
                   </div>
@@ -95,6 +98,7 @@
                 <div id="copyright">
                   <ul class="menu">
                     <li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                     Verti is released under the <a href="http://html5up.net/license">Creative Commons Attribution license</a>
                   </ul>
                 </div>
               </div>
@@ -112,6 +116,8 @@
       <script src="assets/js/util.js"></script>
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
       <script src="assets/js/main.js"></script>
+      <script src="uxControllers/registrationController.js"></script>
+
 
   </body>
 </html>
