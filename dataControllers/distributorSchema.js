@@ -3,6 +3,7 @@ var Schema = mongoose.Schema;
 
 var distributorSchema = new Schema({
 	orgName: String,
+	userType: String,
 	contactName: String,
 	phone: String,
 	email: String, 

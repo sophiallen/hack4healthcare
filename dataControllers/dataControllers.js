@@ -10,6 +10,7 @@ exports.createDist = function(req, res){
 	var entry = new Distributor({
 		//id and users are auto-generated...
 		orgName: req.body.org_name,
+		userType: req.body.user_type,
 		contactName: req.body.contact_name,
 		phone: req.body.phone,
 		email: req.body.email,
@@ -40,8 +41,21 @@ exports.createDist = function(req, res){
 	});
 };
 
+exports.createRequest = function(req, res){
+	var today = new Date();
+	var entry = new DonationRequest({
+		type: req.body.donation_type,
+		amount: req.body.amount,
+		dateCreated: today.toLocaleDateString(),
+		distributor: req.body.,
+	urgency: {type: Number, default: 3},
+	fulfilled: Boolean
+	})
+}
+
+
 exports.getAllDists = function(req, res){
-		Distributor.find({}, '-_id -__v', function(err, results){
+		Distributor.find({userType: 'distributor'}, '-_id -__v', function(err, results){
 		if (err){
 			res.status(500).send('Error: a database error occurred.');
 		} else {
