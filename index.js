@@ -14,7 +14,7 @@ app.use('/api', require('cors')());
 
 
 var api = require('./routes/api.js');
-var routes = require('./routes/routes.js');
+//var routes = require('./routes/routes.js'); buggy... :P
 
 app.get('/', function(req, res){
 		res.type('text/html');
