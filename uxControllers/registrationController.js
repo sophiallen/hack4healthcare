@@ -3,7 +3,7 @@ var registration = angular.module('registrationController',[]);
 registration.controller('RegistrationController', ['$scope', function($scope){
 	$scope.register = function()
 	{
-		
+		console.log("I am in the regiester function.");
 		$http.post('/api/create_dist', $scope.newDist).then(function(response){
 			$scope.feedback = response.data;		
 
