@@ -39,3 +39,13 @@ exports.createDist = function(req, res){
 
 	});
 };
+
+exports.getAllDists = function(req, res){
+		Distributor.find({}, '-_id -__v', function(err, results){
+		if (err){
+			res.status(500).send('Error: a database error occurred.');
+		} else {
+			res.json(results);
+		}
+	});
+}
