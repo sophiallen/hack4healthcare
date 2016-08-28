@@ -10,9 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
    <script src="../../uxControllers/loginController.js"></script>
   </head>
-  <body>
+  <body ng-app="loginApp">
 
-      <div id="page-wrapper">
+      <div id="page-wrapper" ng-controller="loginController">
 
       <!-- Header -->
         <div id="header-wrapper">
@@ -32,14 +32,14 @@
                 <div>
                   <div class="row">
                     <div class="6u 12u$(mobile)">
-                      <p>Username</p><input type="text" name="login-username" ng-model="" />
+                      <p>Username</p><input type="text" name="login-username" ng-model="user" />
                     </div>
                     <div class="6u 12u$(mobile)">
-                      <p>Password</p><input type="password" name="login-password" ng-model=""/>
+                      <p>Password</p><input type="password" name="login-password" ng-model="password"/>
                     </div>
 
                     <div class="12u$">
-                        <button value="Login" ng-click="login()"/>Login</button>
+                        <button value="Login" ng-click="logon()"/>Login</button>
                       </div>
                     </div>
                   </div>
