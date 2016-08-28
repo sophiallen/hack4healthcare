@@ -11,6 +11,7 @@ app.set('port', process.env.PORT || 3000);
 app.use(express.static('app'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(express.static('app/views'));
 app.use('/api', require('cors')());
 
 var connectionString = 'mongodb://' + keys.dbUserName + ':' + keys.dbPass + keys.dbUrl;
