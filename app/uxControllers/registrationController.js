@@ -10,11 +10,11 @@ registration.controller('registrationController', function($scope, $http, $windo
 			$scope.feedback = response.data;		
 		});
 		
-		if ($scope.user_type == "distributor")
+		if ($scope.newDist.user_type == "distributor")
 		{
 			$window.location.href ="custom-homepage-distributor.html";
 		}
-		else if ($scope.user_type == "supplier")
+		else if ($scope.newDist.user_type == "supplier")
 		{
 			$window.location.href = "custom-homepage-supplier.html";
 		}
