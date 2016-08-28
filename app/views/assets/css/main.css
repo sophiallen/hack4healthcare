@@ -1999,6 +1999,10 @@
 
 /* Banner */
 
+	.reg-p {
+		font-size: 10px;
+	}
+
 	#banner {
 		position: relative;
 
