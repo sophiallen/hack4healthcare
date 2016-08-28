@@ -104,5 +104,3 @@ exports.getAllRequests = function(req, res){
 	})
 }
 
-
-
